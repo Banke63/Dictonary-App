@@ -1,0 +1,86 @@
+:root{
+    --bcg-color: #667BC6;
+    --padding:20px;
+    --text-color:#fff;
+    --font-size:20px;
+    --border-redius:20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header nav h1, footer p{
+    background-color: var(--bcg-color);
+    padding: var(--padding);
+    color: var(--text-color);
+}
+
+footer p{
+    font-size: var(--font-size);
+    text-align: center;
+}
+
+main{
+    margin-block: 30px;
+}
+main section form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main section form input{
+    flex-grow: 1;
+    padding: calc(var(--padding)/2);
+    border-radius: calc(var(--border-redius)/4);
+    background-color: #e9ecef;
+    border: none;
+    text-transform: capitalize;
+    outline: none;
+}
+
+main section form button{
+    padding: 10px 20px;
+    border-radius: calc(var(--border-redius)/4);
+    background-color: var(--bcg-color);
+    color: var(--text-color);
+    font-size: calc(var(--font-size)/1.2);
+    font-weight: 500;
+    border: none;
+}
+
+@media only screen and (max-width: 600px) {
+    main section form{
+        flex-direction: column;
+    }
+    main section form input, main section form button{
+        width: 100%;
+    }
+}
+
+.result p{
+    margin-bottom: 3px;
+}
+
+.partsOfSpeech{
+    color: red;
+    text-transform: capitalize;
+}
+
+.result li, .result span{
+    margin-left: 30px;
+}
+
+.result audio{
+    margin-top: 20px;
+}
+
+.datanotfound{
+    margin-block: 20px;
+    text-align: center;
+    color: red;
+}
